@@ -40,7 +40,8 @@ pip install -r requirements.txt
 
 <pre>
 <code>
-cd workspace <br>
+cd workspace    
+
 python3 workspace/test.py
 </code>
 </pre>
