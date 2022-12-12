@@ -20,6 +20,7 @@ schedule.every(10).seconds.do(alarm)
 face_cascade = cv2.CascadeClassifier('../haarcascade/haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('../haarcascade/haarcascade_eye.xml')
 
+
 webcam = cv2.VideoCapture(0)
 if not webcam.isOpened():
     print("Could not open webcam")
