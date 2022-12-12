@@ -43,7 +43,7 @@ while webcam.isOpened():
         roi_color = frame[y:y + h, x:x + w]
         eyes = eye_cascade.detectMultiScale(roi_gray)
         
-     if len(faces) >= threshold:
+    if len(faces) >= threshold:
         playsound("BeepBeep.mp3")
 
     # displaying the image
