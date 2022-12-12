@@ -1,11 +1,18 @@
+# import module
 import cv2
 import schedule
+from playsound import playsound
+from gtts import gTTS
 
-threshold = 10
+threshold = 5
 
 def alarm():
     text = "현재 " + str(len(faces)) + "명 있습니다."
     print(text)
+    tts = gTTS(text=text, lang='ko')
+    filename = 'tts.mp3'
+    tts.save(filename)
+    playsound(filename)
 
 schedule.every(10).seconds.do(alarm)
 
