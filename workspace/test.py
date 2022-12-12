@@ -1,12 +1,17 @@
-import numpy as np
 import cv2
-from tkinter import *
-import os
-import time
+import schedule
+
+threshold = 10
+
+def alarm():
+    text = "현재 " + str(len(faces)) + "명 있습니다."
+    print(text)
+
+schedule.every(10).seconds.do(alarm)
 
 # setting up the haar cascade classifiers from the opencv installation
-face_cascade = cv2.CascadeClassifier('../haarcascades/haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('../haarcascades/haarcascade_eye.xml')
+face_cascade = cv2.CascadeClassifier('../haarcascade/haarcascade_frontalface_default.xml')
+eye_cascade = cv2.CascadeClassifier('../haarcascade/haarcascade_eye.xml')
 
 webcam = cv2.VideoCapture(0)
 if not webcam.isOpened():
@@ -32,8 +37,8 @@ while webcam.isOpened():
         eyes = eye_cascade.detectMultiScale(roi_gray)
 
     # displaying the image
-    cv2.imshow('img', frame)
-
+    cv2.imshow('Count People', frame)
+    schedule.run_pending()
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
