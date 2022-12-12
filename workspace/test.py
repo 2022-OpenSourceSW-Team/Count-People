@@ -42,6 +42,9 @@ while webcam.isOpened():
         roi_gray = gray[y:y + h, x:x + w]
         roi_color = frame[y:y + h, x:x + w]
         eyes = eye_cascade.detectMultiScale(roi_gray)
+        
+    if len(faces) >= threshold:
+        playsound("BeepBeep.mp3")
 
     # displaying the image
     cv2.imshow('Count People', frame)
