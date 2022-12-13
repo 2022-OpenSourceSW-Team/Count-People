@@ -47,9 +47,13 @@ python3 workspace/test.py
 </pre>
 
 ## 시연
+### 데모 비디오    
+<img src="https://github.com/2022-OpenSourceSW-Team/Count-People/blob/main/demo/demo_Image.gif">
 
-추후 추가 예정
+### 결과창 출력    
+<img src="https://github.com/2022-OpenSourceSW-Team/Count-People/blob/main/demo/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA.png">
 
+자세한 데모 비디오는 Demo 디렉토리에서 확인해주시기를 바랍니다. 
 ## 라이센스
 
 Apache License 2.0   
